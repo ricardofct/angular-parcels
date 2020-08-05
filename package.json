@@ -1,11 +1,24 @@
 {
-  "name": "single-spa-angular-parcels",
+  "name": "micro-frontends",
   "version": "1.0.0",
-  "description": "",
+  "description": "My-app é um projeto simple para ser usado pelo projeto sigle-spa.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "concurrently --kill-others \"npm run parcel\" \"npm run menu\" \"npm run utente\" \"npm run base\"",
+    "base": "cd ./single-spa && npm start",
+    "menu": "cd ./my-app && npm run serve:single-spa",
+    "parcel": "cd ./parcel && npm run serve:single-spa",
+    "utente": "cd ./utente && npm run serve:single-spa"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://https://github.com/ricardofct/angular-parcels"
   },
   "author": "Ricardo Trindade",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^5.0.1"
+  },
+  "dependencies": {}
 }
