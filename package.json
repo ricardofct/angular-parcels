@@ -5,11 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "concurrently --kill-others \"npm run parcel\" \"npm run menu\" \"npm run utente\" \"npm run base\"",
+    "start": "concurrently --kill-others \"npm run first\" \"npm run second\" \"npm run third\" \"npm run base\"",
     "base": "cd ./single-spa && npm start",
-    "menu": "cd ./my-app && npm run serve:single-spa",
-    "parcel": "cd ./parcel && npm run serve:single-spa",
-    "utente": "cd ./utente && npm run serve:single-spa"
+    "first": "cd ./first && npm run serve:single-spa",
+    "second": "cd ./second && npm run serve:single-spa",
+    "third": "cd ./third && npm run serve:single-spa"
   },
   "repository": {
     "type": "git",
